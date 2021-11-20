@@ -1,0 +1,6 @@
+export const GET_BOOKS = 'GET_BOOKS';
+export const GET_AUTHORS_BOOKS = 'GET_AUTHORS_BOOKS';
+export const RESET_AUTHORS_BOOKS = 'RESET_AUTHORS_BOOKS';
+export const GET_BOOK_DETAIL = 'GET_BOOK_DETAIL';
+export const SEARCH_BOOKS = 'SEARCH_BOOKS';
+export const CUSTOM_URL_BOOK = 'CUSTOM_URL_BOOK';
