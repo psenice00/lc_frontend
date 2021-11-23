@@ -1,6 +1,7 @@
 import React, { useEffect, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Table, Button, Row } from 'react-bootstrap';
+import { Helmet } from "react-helmet";
 
 import Spinner from '../../shared_components/spinner';
 import WriterItem from "./components/writer_item";
@@ -46,6 +47,10 @@ const Writers = () => {
                             </tbody>
                         </Table>
                         {writersState.next !== null && <PaginationEL nextFunc={() => dispatch(customURLwriters(writersState.next))} isLoading={appState.loading} />}
+                        <Helmet>
+                            <title>Seznam spisovatelů | LínýČtenář.cz</title>
+                            <meta name="description" content="Seznam autorů s dostupnými rozbory děl k maturitě." />
+                        </Helmet>
 
                     </Fragment>
                 )

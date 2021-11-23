@@ -7,6 +7,7 @@ import { faUserCircle, faBookOpen, faNewspaper } from "@fortawesome/free-solid-s
 
 import { getStats } from "../../state/appState/appStateActions";
 import { Row } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     const stats = useSelector((state) => state.appStateReducer);
@@ -29,6 +30,10 @@ const Home = () => {
             <Row>
                 {infoBoxes.map(item => <AnimatedBox data={item} key={item.id} />)}
             </Row>
+            <Helmet>
+                <title>Vyhledávej rozbory k maturitě snadno a pohodlně | LínýČtenář.cz</title>
+                <meta name="description" content={"Vyhledávej rozbory z celého českého internetu a usnadni si práci při tvorbě čtenářských deníků a výtahů knih k maturitě."} />
+            </Helmet>
         </div>
 
     );

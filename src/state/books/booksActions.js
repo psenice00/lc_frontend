@@ -6,7 +6,8 @@ import { handleError } from '../../utils/error_helpers';
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
 axios.defaults.xsrfCookieName = "csrftoken"
 // const baseUrl = "https://psenice00.pythonanywhere.com";
-const baseUrl = "http://127.0.0.1:8000";
+// const baseUrl = "http://127.0.0.1:8000";
+const baseUrl = "http://liny-ctenar-app.eba-przuxyyc.us-west-2.elasticbeanstalk.com/";
 
 export const getBooks = () => (dispatch) => {
     dispatch({ type: TOGGLE_LOADING, payload: true });

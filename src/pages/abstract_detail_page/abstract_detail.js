@@ -9,6 +9,7 @@ import Spinner from '../../shared_components/spinner';
 import ErrorPage from "../../shared_components/error_page";
 import DetailCopy from "./components/abstract_detail_copy";
 import DetailNavigation from "./components/abstract_detail_navigation";
+import { Helmet } from "react-helmet";
 
 const AbstractDetail = () => {
     const appState = useSelector((state) => state.appStateReducer);
@@ -43,6 +44,10 @@ const AbstractDetail = () => {
                                 <DetailCopy abstractDetail={abstractState.abstractDetail} />
                                 <DetailNavigation abstractDetail={abstractState.abstractDetail} />
                             </div>
+                            <Helmet>
+                                <title>{`${abstractState.abstractDetail.bookTitle}(${abstractState.abstractDetail.BookUID}) - rozbor díla k maturitě ze stránky ${abstractState.abstractDetail.website} | LínýČtenář.cz`}</title>
+                                <meta name="description" content={`Rozbor knihy ${abstractState.abstractDetail.bookTitle}(${abstractState.abstractDetail.BookUID}) k maturitě už na tebe čeká na stránce ${abstractState.abstractDetail.website}.`} />
+                            </Helmet>
                         </div>)
                     ))))}
         </Container>

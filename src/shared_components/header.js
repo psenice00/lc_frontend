@@ -154,8 +154,8 @@ class Header extends Component {
                                 loading={this.props.appState.loadingSuggestions}
                                 renderInput={function (props) {
                                     return <>
-                                        {this.loading && <div class="spinner-border loader text-secondary" role="status">
-                                            <span class="sr-only">Loading...</span>
+                                        {this.loading && <div className="spinner-border loader text-secondary" role="status">
+                                            <span className="sr-only">Loading...</span>
                                         </div>}
                                         <input {...props} placeholder="Hledat" id="searchInput" style={{ width: '100%', height: '100%', fontSize: '25px' }} /></>
                                 }}
@@ -168,7 +168,7 @@ class Header extends Component {
                                                     <FontAwesomeIcon className="web-color" size="lg" icon={faBookOpen} />
                                                     <div className="ml-3 my-0 py-0 align-middle">
                                                         <h4 className="m-0 p-0 web-color">{item.title}</h4>
-                                                        <p className="m-0 p-0 text-secondary">{item.authorName} ({item.authorPseudonyms})</p>
+                                                        <p className="m-0 p-0 text-secondary">{item.authorName} {item.authorPseudonyms && (item.authorPseudonyms)}</p>
                                                     </div>
 
                                                 </div>

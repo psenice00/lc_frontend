@@ -10,6 +10,7 @@ import AbstractItem from "./components/abstract_item";
 import Spinner from '../../shared_components/spinner';
 import PaginationEL from "../../shared_components/pagination";
 import ErrorPage from "../../shared_components/error_page";
+import { Helmet } from "react-helmet";
 
 const Abstracts = () => {
     const appState = useSelector((state) => state.appStateReducer);
@@ -38,7 +39,7 @@ const Abstracts = () => {
                         {booksState.book && <AbstractHeading book={booksState.book} autorSlug={params.writer} />}
 
                         {abstractState.abstracts !== undefined &&
-                            (<Table hover className="col-12 col-lg-10 mx-auto">
+                            (<><Table hover className="col-12 col-lg-10 mx-auto">
                                 <tbody>
                                     {
                                         abstractState.abstracts.map((abstract, index) => {
@@ -48,7 +49,13 @@ const Abstracts = () => {
                                         })
                                     }
                                 </tbody>
-                            </Table>)
+                            </Table>
+                                <Helmet>
+                                    <title>{`${booksState.book.title} - kniha s dostupnými rozbory k maturitě | LínýČtenář.cz`}</title>
+                                    <meta name="description" content={`Seznam rozborů k maturitě knihy ${booksState.book.title}. Prohlížej rozbory knih z celého čekého internetu.`} />
+                                </Helmet>
+
+                            </>)
                         }
                         {abstractState.next !== null && <PaginationEL nextFunc={() => dispatch(customURLabstracts(abstractState.next))} isLoading={appState.loading} />}
                     </div>
