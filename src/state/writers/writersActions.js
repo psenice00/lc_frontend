@@ -9,7 +9,7 @@ axios.defaults.xsrfCookieName = "csrftoken"
 // const baseUrl = process.env.REACT_APP_BASE_URL;
 // const baseUrl = "https://psenice00.pythonanywhere.com";
 // const baseUrl = "http://127.0.0.1:8000";
-const baseUrl = "https://www.api.linyctenar.cz/";
+const baseUrl = "https://www.api.linyctenar.cz";
 
 export const getWriters = () => (dispatch) => {
     dispatch({ type: TOGGLE_LOADING, payload: true });
