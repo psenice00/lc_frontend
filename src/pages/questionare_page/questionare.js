@@ -47,7 +47,7 @@ const Questionare = () => {
             {(appState.loading) ? (<Spinner height={250} width={250} />) : (
 
                 <div>
-                    <div className="col-10 col-lg-6 mx-auto pt-5 px-0 text-center mt-0 mt-lg-5">
+                    <div className="col-11 col-md-8 col-lg-6 mx-auto pt-5 px-0 text-center mt-0 mt-lg-5">
                         <h2 className="questionareH pt-5 pt-lg-0" >Chybí zde rozbor nebo máte dataz?</h2>
                         <h2 className="questionareH">Neváhejte nás kontaktovat!</h2>
                         <div className="text-danger rounded-0"><p>{error}</p></div>
@@ -63,7 +63,7 @@ const Questionare = () => {
                             <Form.Group controlId="exampleForm.ControlTextarea1">
                                 <Form.Control value={message} onChange={event => setMessage(event.target.value)} className="rounded-0" placeholder="zpráva*" as="textarea" rows={5} />
                             </Form.Group>
-                            <Button onClick={() => sendForm()} className="web-color web-color-border rounded-0 bg-white col-12 col-md-4">
+                            <Button onClick={() => sendForm()} className="col-12 web-color-button rounded-0 align-middle">
                                 Odeslat
                             </Button>
                         </Form>

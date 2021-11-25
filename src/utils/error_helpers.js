@@ -1,16 +1,13 @@
 import ErrorImage from './error_image.png';
+import Error400 from './400_error.png';
+import Error404 from './404_error.png';
 import { TOGGLE_ERROR, TOGGLE_LOADING } from '../state/appState/appStateTypes';
 export const getErrorImage = (status) => {
     //TODO - dodělat obrázky pro ruzné image
     if (status === 404) {
-        return ErrorImage;
-    } else if (status === 403) {
-        return ErrorImage;
-
+        return Error404;
     } else if (status === 400) {
-        return ErrorImage;;
-    } else if (status === 500) {
-        return ErrorImage;
+        return Error400;;
     } else {
         return ErrorImage;
     }
