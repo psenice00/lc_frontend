@@ -1,11 +1,10 @@
 import React from 'react';
-import book from './book-dark.jpg'
 import { Button, Container } from 'react-bootstrap';
+import Book from './book-dark.jpg';
 
 var sectionStyle = {
-    //TODO - zmena na aktualni foto
-    // backgroundImage: "url(https://www.linyctenar.cz/static/frontend/eafe2b3585df0ca98f763f9e8301d7e8.jpg)"
-    backgroundImage: "url(http://psenice00.pythonanywhere.com/static/frontend/eafe2b3585df0ca98f763f9e8301d7e8.jpg)"
+    // backgroundImage: "url(http://psenice00.pythonanywhere.com/static/frontend/eafe2b3585df0ca98f763f9e8301d7e8.jpg)"
+    backgroundImage: `url(${Book})`
 };
 
 
