@@ -40,6 +40,19 @@ const AbstractDetail = () => {
                     (abstractState.abstractDetail &&
                         (<div>
                             <AbstractDetailHeading abstractDetail={abstractState.abstractDetail} />
+                            <div className="mx-auto">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957599795213364"
+                                    crossorigin="anonymous"></script>
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-5957599795213364"
+                                    data-ad-slot="2305659246"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({ });
+                                </script>
+                            </div>
                             <div className="col-12 col-lg-11 px-0 mx-auto">
                                 <DetailCopy abstractDetail={abstractState.abstractDetail} />
                                 <DetailNavigation abstractDetail={abstractState.abstractDetail} />

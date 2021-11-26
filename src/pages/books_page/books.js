@@ -80,6 +80,19 @@ const Books = (props) => {
                                 <title>Seznam knih s dostupnými rozbory k maturitě | LínýČtenář.cz</title>
                                 <meta name="description" content={`Uplný seznam knih ke kterým najdeš rozbory k maturitě.`} />
                             </Helmet></div>)}
+                        <div className="mx-auto">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957599795213364"
+                                crossorigin="anonymous"></script>
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-client="ca-pub-5957599795213364"
+                                data-ad-slot="2114087550"
+                                data-ad-format="auto"
+                                data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({ });
+                            </script>
+                        </div>
                         <Table hover className="col-12 col-lg-10 mx-auto">
                             <tbody>
                                 {booksState.books === undefined ? null : (
