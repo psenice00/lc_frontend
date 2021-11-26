@@ -42,7 +42,7 @@ const Books = (props) => {
 
 
     return (
-        <Container className=" container-content shadow normalFont py-5">
+        <Container className=" container-content-web shadow normalFont py-5">
             {(appState.loading && booksState.books.length === 0) ? (<Spinner height={250} width={250} />) : (
 
                 appState.error ? <ErrorPage reloadFunc={() => loadBooks()} error={appState.error} /> : (
@@ -83,7 +83,7 @@ const Books = (props) => {
                                 <meta name="description" content={`Uplný seznam knih ke kterým najdeš rozbory k maturitě.`} />
                             </Helmet></div>)}
                         <div className="mx-auto col-12">
-                        <Adsense
+                            <Adsense
                                 client="ca-pub-5957599795213364"
                                 slot="2114087550"
                                 style={{ display: 'block' }}

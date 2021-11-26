@@ -35,7 +35,7 @@ const AbstractDetail = () => {
 
 
     return (
-        <Container className=" container-content shadow normalFont py-5">
+        <Container className=" container-content-web shadow normalFont py-5">
             {(appState.loading ? (<Spinner height={250} width={250} />) : (
 
                 appState.error ? <ErrorPage reloadFunc={() => loadAbstractDetail()} error={appState.error} /> : (

@@ -43,7 +43,7 @@ const Questionare = () => {
 
 
     return (
-        <Container className="container-content shadow normalFont py-5 px-0">
+        <Container className="container-content-web shadow normalFont py-5 px-0">
             {(appState.loading) ? (<Spinner height={250} width={250} />) : (
 
                 <div>

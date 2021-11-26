@@ -31,7 +31,7 @@ const Search = (props) => {
     }
 
     return (
-        <Container className="container-content shadow normalFont py-5">
+        <Container className="container-content-web shadow normalFont py-5">
             <div className="col-12 col-md-11 mx-0 mx-md-auto px-0 px-sm-2 px-lg-4">
                 <div className=" pl-0 pl-xl-4 mt-3"><h2 className="text-center text-md-left mb-5 ml-0 ml-md-4 ml-lg-5  pl-0 pl-lg-5 align-middle"><FontAwesomeIcon icon={faSearch} size="sm" /> - {search}</h2></div>
                 <Tabs fill defaultActiveKey="writers" id="uncontrolled-tab-example" className="mb-3">

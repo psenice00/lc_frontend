@@ -32,7 +32,7 @@ const Abstracts = () => {
 
 
     return (
-        <Container className=" container-content shadow normalFont py-5">
+        <Container className=" container-content-web shadow normalFont py-5">
             {(appState.loading && abstractState.abstracts.length === 0) ? (<Spinner height={250} width={250} />) : (
 
                 appState.error ? <ErrorPage reloadFunc={() => loadAbstracts()} error={appState.error} /> : (

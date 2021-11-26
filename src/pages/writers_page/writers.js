@@ -60,7 +60,7 @@ const Writers = () => {
     }, []);
 
     return (
-        <Container className="container-content shadow normalFont py-5">
+        <Container className="container-content-web shadow normalFont py-5">
             {(appState.loading && writersState.writers.length === 0) ? (<Spinner height={250} width={250} />) : (
 
                 appState.error ? <ErrorPage reloadFunc={() => dispatch(getWriters())} error={appState.error} /> : (

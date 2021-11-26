@@ -11,7 +11,7 @@ const WriterItem = (props) => {
             <td className="text-right d-none d-md-block ml-auto">{props.writer.liveDate}</td>
             <td className="justify- pr-2 pr-md-4 ml-auto ml-md-5"><Link to={{
                 pathname: (props.writer.slug + '/')
-            }}><Button size="sm" className="web-color-button rounded-0">Zobrazit</Button></Link></td>
+            }}><Button onClick={() => window.open(props.writer.url, '_blank')} size="sm" className="web-color-button rounded-0">Zobrazit</Button></Link></td>
         </tr>
     );
 }
