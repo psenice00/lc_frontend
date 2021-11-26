@@ -56,7 +56,6 @@ const Writers = () => {
                         <div className="mx-auto col-12">
                             <ins
                                 className="adsbygoogle"
-                                style={{ display: "inline-block", width: "300px", height: "250px" }}
                                 data-ad-client="ca-pub-5957599795213364"
                                 data-ad-slot="2114087550"
                             ></ins>
