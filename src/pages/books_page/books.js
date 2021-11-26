@@ -11,6 +11,7 @@ import ErrorPage from "../../shared_components/error_page";
 import Spinner from '../../shared_components/spinner';
 import PaginationEL from "../../shared_components/pagination";
 import databazeKnih from "./components/databaze-knih.png"
+import { Adsense } from "@ctrl/react-adsense";
 
 const Books = (props) => {
     const appState = useSelector((state) => state.appStateReducer);
@@ -82,12 +83,11 @@ const Books = (props) => {
                                 <meta name="description" content={`Uplný seznam knih ke kterým najdeš rozbory k maturitě.`} />
                             </Helmet></div>)}
                         <div className="mx-auto col-12">
-                            {/* <ins
-                                className="adsbygoogle"
+                        <Adsense
+                                client="ca-pub-5957599795213364"
+                                slot="2114087550"
                                 style={{ display: 'block' }}
-                                data-ad-client="ca-pub-5957599795213364"
-                                data-ad-slot="2114087550"
-                            ></ins> */}
+                            />
                         </div>
                         <Table hover className="col-12 col-lg-10 mx-auto">
                             <tbody>

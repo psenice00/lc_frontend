@@ -11,6 +11,7 @@ import Spinner from '../../shared_components/spinner';
 import PaginationEL from "../../shared_components/pagination";
 import ErrorPage from "../../shared_components/error_page";
 import { Helmet } from "react-helmet";
+import { Adsense } from "@ctrl/react-adsense";
 
 const Abstracts = () => {
     const appState = useSelector((state) => state.appStateReducer);
@@ -38,12 +39,11 @@ const Abstracts = () => {
                     <div>
                         {booksState.book && <AbstractHeading book={booksState.book} autorSlug={params.writer} />}
                         <div className="mx-auto col-12">
-                            {/* <ins
-                                className="adsbygoogle"
-                                style={{ display: "inline-block", width: "300px", height: "250px" }}
-                                data-ad-client="ca-pub-5957599795213364"
-                                data-ad-slot="2114087550"
-                            ></ins> */}
+                        <Adsense
+                                client="ca-pub-5957599795213364"
+                                slot="2114087550"
+                                style={{ display: 'block' }}
+                            />
                         </div>
                         {abstractState.abstracts !== undefined &&
                             (<><Table hover className="col-12 col-lg-10 mx-auto">

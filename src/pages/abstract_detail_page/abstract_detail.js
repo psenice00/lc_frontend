@@ -10,6 +10,7 @@ import ErrorPage from "../../shared_components/error_page";
 import DetailCopy from "./components/abstract_detail_copy";
 import DetailNavigation from "./components/abstract_detail_navigation";
 import { Helmet } from "react-helmet";
+import { Adsense } from "@ctrl/react-adsense";
 
 const AbstractDetail = () => {
     const appState = useSelector((state) => state.appStateReducer);
@@ -43,12 +44,11 @@ const AbstractDetail = () => {
                         (<div>
                             <AbstractDetailHeading abstractDetail={abstractState.abstractDetail} />
                             <div className="mx-auto col-12">
-                                {/* <ins
-                                    className="adsbygoogle"
-                                    style={{ display: "inline-block", width: "300px", height: "250px" }}
-                                    data-ad-client="ca-pub-5957599795213364"
-                                    data-ad-slot="2305659246"
-                                ></ins> */}
+                                <Adsense
+                                    client="ca-pub-5957599795213364"
+                                    slot="2305659246"
+                                    style={{ display: 'block' }}
+                                />
                             </div>
                             <div className="col-12 col-lg-11 px-0 mx-auto">
                                 <DetailCopy abstractDetail={abstractState.abstractDetail} />
