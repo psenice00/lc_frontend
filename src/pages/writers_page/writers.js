@@ -24,26 +24,38 @@ const Writers = () => {
         }
         document.title = "Seznam spisovatelů";
 
-        const pushAd = () => {
-            try {
-                const adsbygoogle = window.adsbygoogle
-                console.log({ adsbygoogle })
-                adsbygoogle.push({})
-            } catch (e) {
-                console.error(e)
-            }
-        }
+        // const pushAd = () => {
+        //     try {
+        //         const adsbygoogle = window.adsbygoogle
+        //         console.log({ adsbygoogle })
+        //         adsbygoogle.push({})
+        //     } catch (e) {
+        //         console.error(e)
+        //     }
+        // }
 
-        let interval = setInterval(() => {
-            if (window.adsbygoogle) {
-                pushAd()
-                clearInterval(interval)
-            }
-        }, 300)
+        // let interval = setInterval(() => {
+        //     if (window.adsbygoogle) {
+        //         pushAd()
+        //         clearInterval(interval)
+        //     }
+        // }, 300)
 
-        return () => {
-            clearInterval(interval)
-        }
+        // return () => {
+        //     clearInterval(interval)
+        // }
+
+        const installGoogleAds = () => {
+            const elem = document.createElement("script");
+            elem.src =
+                "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+            elem.async = true;
+            elem.defer = true;
+            document.body.insertBefore(elem, document.body.firstChild);
+        };
+        installGoogleAds();
+        (adsbygoogle = window.adsbygoogle || []).push({});
+
     }, []);
 
     return (
@@ -58,6 +70,8 @@ const Writers = () => {
                                 className="adsbygoogle"
                                 data-ad-client="ca-pub-5957599795213364"
                                 data-ad-slot="2114087550"
+                                data-adtest="on"
+                                style={{ display: 'block' }}
                             ></ins>
                         </div>
                         <Table hover className="col-12 col-lg-10 mx-auto">
