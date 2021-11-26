@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { Container, Table, Image, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { Helmet } from "react-helmet";
-import AdSense from 'react-adsense';
 
 import { resetWriter, getWriter } from "../../state/writers/writersActions";
 import { getBooks, getAutohorsBooks, customURLbooks, resetAuthorsBooks } from "../../state/books/booksActions";
@@ -23,6 +22,29 @@ const Books = (props) => {
     useEffect(() => {
         loadBooks(params.slug);
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+
+        const pushAd = () => {
+            try {
+                const adsbygoogle = window.adsbygoogle
+                console.log({ adsbygoogle })
+                adsbygoogle.push({})
+            } catch (e) {
+                console.error(e)
+            }
+        }
+
+        let interval = setInterval(() => {
+            if (window.adsbygoogle) {
+                pushAd()
+                clearInterval(interval)
+            }
+        }, 300)
+
+        return () => {
+            clearInterval(interval)
+        }
+
+
     }, [params.slug]);
 
     const loadBooks = (slugUrl) => {
@@ -82,13 +104,12 @@ const Books = (props) => {
                                 <meta name="description" content={`Uplný seznam knih ke kterým najdeš rozbory k maturitě.`} />
                             </Helmet></div>)}
                         <div className="mx-auto col-12">
-                            <AdSense.Google
-                                client="ca-pub-5957599795213364"
-                                slot="2114087550"
-                                style={{ display: 'block' }}
-                                format='auto'
-                                responsive='true'
-                            />
+                            <ins
+                                className="adsbygoogle"
+                                style={{ display: "inline-block", width: "300px", height: "250px" }}
+                                data-ad-client="ca-pub-5957599795213364"
+                                data-ad-slot="2114087550"
+                            ></ins>
                         </div>
                         <Table hover className="col-12 col-lg-10 mx-auto">
                             <tbody>

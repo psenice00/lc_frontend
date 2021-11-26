@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Table } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import AdSense from 'react-adsense';
 
 import AbstractDetailHeading from "./components/abstract_detail_heading";
 import { resetAbstractDetail, getAbstractDetail } from "../../state/abstracts/abstractsActions";
@@ -23,6 +22,29 @@ const AbstractDetail = () => {
     useEffect(() => {
         loadAbstractDetail(params.book, params.abstractId);
         document.title = abstractState.abstractDetail ? `${abstractState.abstractDetail.bookTitle} (${abstractState.abstractDetail.BookUID}) - Rozbor k maturitě` : `${params.book} (${params.abstractId}) - Rozbor k maturitě`;
+
+        const pushAd = () => {
+            try {
+                const adsbygoogle = window.adsbygoogle
+                console.log({ adsbygoogle })
+                adsbygoogle.push({})
+            } catch (e) {
+                console.error(e)
+            }
+        }
+
+        let interval = setInterval(() => {
+            if (window.adsbygoogle) {
+                pushAd()
+                clearInterval(interval)
+            }
+        }, 300)
+
+        return () => {
+            clearInterval(interval)
+        }
+
+
     }, [params.abstractId]);
 
     const loadAbstractDetail = (bookSlug, abstractId) => {
@@ -42,14 +64,13 @@ const AbstractDetail = () => {
                         (<div>
                             <AbstractDetailHeading abstractDetail={abstractState.abstractDetail} />
                             <div className="mx-auto col-12">
-                            <AdSense.Google
-                                client="ca-pub-5957599795213364"
-                                slot="2305659246"
-                                style={{ display: 'block' }}
-                                format='auto'
-                                responsive='true'
-                            />
-                        </div>
+                                <ins
+                                    className="adsbygoogle"
+                                    style={{ display: "inline-block", width: "300px", height: "250px" }}
+                                    data-ad-client="ca-pub-5957599795213364"
+                                    data-ad-slot="2305659246"
+                                ></ins>
+                            </div>
                             <div className="col-12 col-lg-11 px-0 mx-auto">
                                 <DetailCopy abstractDetail={abstractState.abstractDetail} />
                                 <DetailNavigation abstractDetail={abstractState.abstractDetail} />

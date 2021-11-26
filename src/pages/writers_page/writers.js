@@ -35,10 +35,8 @@ const Writers = () => {
         }
 
         let interval = setInterval(() => {
-            // Check if Adsense script is loaded every 300ms
             if (window.adsbygoogle) {
                 pushAd()
-                // clear the interval once the ad is pushed so that function isn't called indefinitely
                 clearInterval(interval)
             }
         }, 300)
