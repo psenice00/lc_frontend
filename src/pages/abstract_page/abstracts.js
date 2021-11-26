@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Table } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import AdSense from 'react-adsense';
 
 import { getBookDetail } from "../../state/books/booksActions";
 import { getAbstracts, customURLabstracts } from "../../state/abstracts/abstractsActions";
@@ -37,18 +38,14 @@ const Abstracts = () => {
                 appState.error ? <ErrorPage reloadFunc={() => loadAbstracts()} error={appState.error} /> : (
                     <div>
                         {booksState.book && <AbstractHeading book={booksState.book} autorSlug={params.writer} />}
-                        <div className="mx-auto">
-                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957599795213364"
-                                crossorigin="anonymous"></script>
-                            <ins class="adsbygoogle"
-                                style="display:block"
-                                data-ad-client="ca-pub-5957599795213364"
-                                data-ad-slot="2114087550"
-                                data-ad-format="auto"
-                                data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({ });
-                            </script>
+                        <div className="mx-auto col-12">
+                            <AdSense.Google
+                                client="ca-pub-5957599795213364"
+                                slot="2114087550"
+                                style={{ display: 'block' }}
+                                format='auto'
+                                responsive='true'
+                            />
                         </div>
                         {abstractState.abstracts !== undefined &&
                             (<><Table hover className="col-12 col-lg-10 mx-auto">

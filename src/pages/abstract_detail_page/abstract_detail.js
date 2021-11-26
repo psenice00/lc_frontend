@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Table } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import AdSense from 'react-adsense';
 
 import AbstractDetailHeading from "./components/abstract_detail_heading";
 import { resetAbstractDetail, getAbstractDetail } from "../../state/abstracts/abstractsActions";
@@ -40,19 +41,15 @@ const AbstractDetail = () => {
                     (abstractState.abstractDetail &&
                         (<div>
                             <AbstractDetailHeading abstractDetail={abstractState.abstractDetail} />
-                            <div className="mx-auto">
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957599795213364"
-                                    crossorigin="anonymous"></script>
-                                <ins class="adsbygoogle"
-                                    style="display:block"
-                                    data-ad-client="ca-pub-5957599795213364"
-                                    data-ad-slot="2305659246"
-                                    data-ad-format="auto"
-                                    data-full-width-responsive="true"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({ });
-                                </script>
-                            </div>
+                            <div className="mx-auto col-12">
+                            <AdSense.Google
+                                client="ca-pub-5957599795213364"
+                                slot="2305659246"
+                                style={{ display: 'block' }}
+                                format='auto'
+                                responsive='true'
+                            />
+                        </div>
                             <div className="col-12 col-lg-11 px-0 mx-auto">
                                 <DetailCopy abstractDetail={abstractState.abstractDetail} />
                                 <DetailNavigation abstractDetail={abstractState.abstractDetail} />
