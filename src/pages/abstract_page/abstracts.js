@@ -22,29 +22,6 @@ const Abstracts = () => {
 
     useEffect(() => {
         loadAbstracts(params.book);
-
-
-        const pushAd = () => {
-            try {
-                const adsbygoogle = window.adsbygoogle
-                console.log({ adsbygoogle })
-                adsbygoogle.push({})
-            } catch (e) {
-                console.error(e)
-            }
-        }
-
-        let interval = setInterval(() => {
-            if (window.adsbygoogle) {
-                pushAd()
-                clearInterval(interval)
-            }
-        }, 300)
-
-        return () => {
-            clearInterval(interval)
-        }
-
     }, []);
 
     const loadAbstracts = (slug) => {
@@ -61,12 +38,12 @@ const Abstracts = () => {
                     <div>
                         {booksState.book && <AbstractHeading book={booksState.book} autorSlug={params.writer} />}
                         <div className="mx-auto col-12">
-                            <ins
+                            {/* <ins
                                 className="adsbygoogle"
                                 style={{ display: "inline-block", width: "300px", height: "250px" }}
                                 data-ad-client="ca-pub-5957599795213364"
                                 data-ad-slot="2114087550"
-                            ></ins>
+                            ></ins> */}
                         </div>
                         {abstractState.abstracts !== undefined &&
                             (<><Table hover className="col-12 col-lg-10 mx-auto">

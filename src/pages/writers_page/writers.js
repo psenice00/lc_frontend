@@ -2,6 +2,7 @@ import React, { useEffect, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Table, Button, Row } from 'react-bootstrap';
 import { Helmet } from "react-helmet";
+import { Adsense } from '@ctrl/react-adsense';
 
 import Spinner from '../../shared_components/spinner';
 import WriterItem from "./components/writer_item";
@@ -66,15 +67,13 @@ const Writers = () => {
                     <Fragment>
                         <div className=" pl-0 pl-xl-4 mt-3"><h2 className="text-center text-md-left mb-5 ml-0 ml-md-4 ml-lg-5  pl-0 pl-lg-5">Seznam spisovatelů</h2></div>
                         <div className="mx-auto col-12">
-                            <ins class="adsbygoogle"
+                            <Adsense
+                                client="ca-pub-5957599795213364"
+                                slot="2114087550"
                                 style={{ display: 'block' }}
-                                data-ad-client="ca-pub-5957599795213364"
-                                data-ad-slot="2305659246"
-                                data-ad-format="auto"
-                                data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({ });
-                            </script>
+                                layout="in-article"
+                                format="fluid"
+                            />
                         </div>
                         <Table hover className="col-12 col-lg-10 mx-auto">
 

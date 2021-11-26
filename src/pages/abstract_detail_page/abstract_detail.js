@@ -23,27 +23,6 @@ const AbstractDetail = () => {
         loadAbstractDetail(params.book, params.abstractId);
         document.title = abstractState.abstractDetail ? `${abstractState.abstractDetail.bookTitle} (${abstractState.abstractDetail.BookUID}) - Rozbor k maturitě` : `${params.book} (${params.abstractId}) - Rozbor k maturitě`;
 
-        const pushAd = () => {
-            try {
-                const adsbygoogle = window.adsbygoogle
-                console.log({ adsbygoogle })
-                adsbygoogle.push({})
-            } catch (e) {
-                console.error(e)
-            }
-        }
-
-        let interval = setInterval(() => {
-            if (window.adsbygoogle) {
-                pushAd()
-                clearInterval(interval)
-            }
-        }, 300)
-
-        return () => {
-            clearInterval(interval)
-        }
-
 
     }, [params.abstractId]);
 
@@ -64,12 +43,12 @@ const AbstractDetail = () => {
                         (<div>
                             <AbstractDetailHeading abstractDetail={abstractState.abstractDetail} />
                             <div className="mx-auto col-12">
-                                <ins
+                                {/* <ins
                                     className="adsbygoogle"
                                     style={{ display: "inline-block", width: "300px", height: "250px" }}
                                     data-ad-client="ca-pub-5957599795213364"
                                     data-ad-slot="2305659246"
-                                ></ins>
+                                ></ins> */}
                             </div>
                             <div className="col-12 col-lg-11 px-0 mx-auto">
                                 <DetailCopy abstractDetail={abstractState.abstractDetail} />
