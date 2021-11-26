@@ -67,7 +67,7 @@ const Books = (props) => {
                                     </div>
                                 </div>
                                 <div className="d-block d-lg-none ml-auto mb-auto">
-                                    <Button className=" border-0 pb-3 pt-2" style={{ backgroundColor: '#a03a3b' }} block>
+                                    <Button onClick={() => window.open(writersState.writer.url, '_blank', 'noopener,noreferrer')} className=" border-0 pb-3 pt-2" style={{ backgroundColor: '#a03a3b' }} block>
                                         <span style={{ opacity: '0.9' }} className="align-bottom pr-2">Zobrazit autora na</span>
                                         <Image src={databazeKnih} width="150px" />
                                     </Button>
