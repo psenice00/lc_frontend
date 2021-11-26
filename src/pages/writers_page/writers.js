@@ -2,7 +2,6 @@ import React, { useEffect, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Table, Button, Row } from 'react-bootstrap';
 import { Helmet } from "react-helmet";
-import AdSense from 'react-adsense';
 
 import Spinner from '../../shared_components/spinner';
 import WriterItem from "./components/writer_item";
@@ -16,7 +15,6 @@ const Writers = () => {
     const writersState = useSelector((state) => state.writersReducer);
     const dispatch = useDispatch();
 
-
     useEffect(() => {
         if (writersState.writers) {
             if (writersState.writers.length < 20) {
@@ -24,8 +22,30 @@ const Writers = () => {
             }
 
         }
-
         document.title = "Seznam spisovatelů";
+
+        const pushAd = () => {
+            try {
+                const adsbygoogle = window.adsbygoogle
+                console.log({ adsbygoogle })
+                adsbygoogle.push({})
+            } catch (e) {
+                console.error(e)
+            }
+        }
+
+        let interval = setInterval(() => {
+            // Check if Adsense script is loaded every 300ms
+            if (window.adsbygoogle) {
+                pushAd()
+                // clear the interval once the ad is pushed so that function isn't called indefinitely
+                clearInterval(interval)
+            }
+        }, 300)
+
+        return () => {
+            clearInterval(interval)
+        }
     }, []);
 
     return (
@@ -36,13 +56,12 @@ const Writers = () => {
                     <Fragment>
                         <div className=" pl-0 pl-xl-4 mt-3"><h2 className="text-center text-md-left mb-5 ml-0 ml-md-4 ml-lg-5  pl-0 pl-lg-5">Seznam spisovatelů</h2></div>
                         <div className="mx-auto col-12">
-                            <AdSense.Google
-                                client="ca-pub-5957599795213364"
-                                slot="2114087550"
-                                style={{ display: 'block' }}
-                                format='auto'
-                                responsive='true'
-                            />
+                            <ins
+                                className="adsbygoogle"
+                                style={{ display: "inline-block", width: "300px", height: "250px" }}
+                                data-ad-client="ca-pub-5957599795213364"
+                                data-ad-slot="2114087550"
+                            ></ins>
                         </div>
                         <Table hover className="col-12 col-lg-10 mx-auto">
 
