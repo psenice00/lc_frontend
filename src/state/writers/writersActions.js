@@ -7,9 +7,7 @@ axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"
 axios.defaults.xsrfCookieName = "csrftoken"
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
-// const baseUrl = "https://psenice00.pythonanywhere.com";
-// const baseUrl = "http://127.0.0.1:8000";
-// const baseUrl = "https://www.api.linyctenar.cz";
+
 
 export const getWriters = () => (dispatch) => {
     dispatch({ type: TOGGLE_LOADING, payload: true });
@@ -77,7 +75,6 @@ export const sendMail = (name, email, message) => (dispatch) => {
     }
     )
         .then((res) => {
-            console.log(res);
             dispatch({
                 type: SEND_MAIL,
                 payload: res.data,
