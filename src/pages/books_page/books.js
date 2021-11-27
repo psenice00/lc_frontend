@@ -59,7 +59,7 @@ const Books = (props) => {
                                             <h5 className="text-md-left text-muted">{writersState.writer.liveDate}</h5>
                                         </div>
                                         <div className="d-none d-lg-block ml-auto mb-auto">
-                                            <Button className=" border-0" style={{ backgroundColor: '#a03a3b' }}>
+                                            <Button onClick={() => window.open(writersState.writer.url, '_blank', 'noopener,noreferrer')} className=" border-0" style={{ backgroundColor: '#a03a3b' }}>
                                                 <Image src={databazeKnih} width="150px" />
                                                 <p style={{ opacity: '0.9' }} className="mb-0">Zobrazit autora</p>
                                             </Button>
