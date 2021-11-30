@@ -43,6 +43,9 @@ const AbstractDetail = () => {
                     (abstractState.abstractDetail &&
                         (<div>
                             <AbstractDetailHeading abstractDetail={abstractState.abstractDetail} />
+                            <div className="col-12 mx-auto">
+                                <script data-cfasync="false" type="text/javascript" src="https://www.linkonclick.com/a/display.php?r=5344219"></script>
+                            </div>
                             <div className="col-12 col-lg-11 px-0 mx-auto">
                                 <DetailCopy abstractDetail={abstractState.abstractDetail} />
                                 <DetailNavigation abstractDetail={abstractState.abstractDetail} />
