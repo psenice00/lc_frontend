@@ -38,13 +38,6 @@ const Abstracts = () => {
                 appState.error ? <ErrorPage reloadFunc={() => loadAbstracts()} error={appState.error} /> : (
                     <div>
                         {booksState.book && <AbstractHeading book={booksState.book} autorSlug={params.writer} />}
-                        <div className="mx-auto col-12">
-                        <Adsense
-                                client="ca-pub-5957599795213364"
-                                slot="2114087550"
-                                style={{ display: 'block' }}
-                            />
-                        </div>
                         {abstractState.abstracts !== undefined &&
                             (<><Table hover className="col-12 col-lg-10 mx-auto">
                                 <tbody>

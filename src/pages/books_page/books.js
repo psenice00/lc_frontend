@@ -82,13 +82,7 @@ const Books = (props) => {
                                 <title>Seznam knih s dostupnými rozbory k maturitě | LínýČtenář.cz</title>
                                 <meta name="description" content={`Uplný seznam knih ke kterým najdeš rozbory k maturitě.`} />
                             </Helmet></div>)}
-                        <div className="mx-auto col-12">
-                            <Adsense
-                                client="ca-pub-5957599795213364"
-                                slot="2114087550"
-                                style={{ display: 'block' }}
-                            />
-                        </div>
+
                         <Table hover className="col-12 col-lg-10 mx-auto">
                             <tbody>
                                 {booksState.books === undefined ? null : (

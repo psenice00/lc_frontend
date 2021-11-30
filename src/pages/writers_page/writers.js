@@ -66,13 +66,6 @@ const Writers = () => {
                 appState.error ? <ErrorPage reloadFunc={() => dispatch(getWriters())} error={appState.error} /> : (
                     <Fragment>
                         <div className=" pl-0 pl-xl-4 mt-3"><h2 className="text-center text-md-left mb-5 ml-0 ml-md-4 ml-lg-5  pl-0 pl-lg-5">Seznam spisovatelů</h2></div>
-                        <div className="mx-auto col-12">
-                            <Adsense
-                                client="ca-pub-5957599795213364"
-                                slot="2114087550"
-                                style={{ display: 'block' }}
-                            />
-                        </div>
                         <Table hover className="col-12 col-lg-10 mx-auto">
 
                             <tbody>

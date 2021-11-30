@@ -43,13 +43,6 @@ const AbstractDetail = () => {
                     (abstractState.abstractDetail &&
                         (<div>
                             <AbstractDetailHeading abstractDetail={abstractState.abstractDetail} />
-                            <div className="mx-auto col-12">
-                                <Adsense
-                                    client="ca-pub-5957599795213364"
-                                    slot="2305659246"
-                                    style={{ display: 'block' }}
-                                />
-                            </div>
                             <div className="col-12 col-lg-11 px-0 mx-auto">
                                 <DetailCopy abstractDetail={abstractState.abstractDetail} />
                                 <DetailNavigation abstractDetail={abstractState.abstractDetail} />
