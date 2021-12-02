@@ -124,7 +124,7 @@ class Header extends Component {
             <Navbar sticky="top" id="navbar" className="navbar mb-lg-0 px-3 px-xl-5 py-0" collapseOnSelect bg="light" expand="lg">
 
                 <Link to="/" className="nounderline"><h2 className="mt-2 text-dark font-weight-bolder mr-0 mr-xl-5 pr-0 pr-sm-5">LínýČtenář.cz</h2></Link>
-                <Navbar.Toggle onClick={() => this.toggleTheIcon()} id="togglerButton" className="navbar-toggler second-button" aria-controls="basic-navbar-nav" aria-label="Toggle navigation"> <div className="animated-icon2"><span></span><span></span><span></span><span></span></div></Navbar.Toggle>
+                <Navbar.Toggle onClick={() => this.toggleTheIcon()} id="togglerButton" className="navbar-toggler second-button mr-3" aria-controls="basic-navbar-nav" aria-label="Toggle navigation"> <div className="animated-icon2"><span></span><span></span><span></span><span></span></div></Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav" className="ml-0 ml-xl-5 pl-0 pl-xl-4 bg-light  d-lg-flex justify-content-between ">
                     <div></div>
                     <Nav className="col-12  col-lg-7  ml-2 ml-lg-0 ml-xl-3  pl-0  pl-xl-5 pt-5 pt-lg-0">
