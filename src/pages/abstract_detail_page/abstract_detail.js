@@ -44,7 +44,7 @@ const AbstractDetail = () => {
                         (<div>
                             <AbstractDetailHeading abstractDetail={abstractState.abstractDetail} />
                             <div className="col-12 mx-auto">
-                                <script data-cfasync="false" type="text/javascript" src="https://www.linkonclick.com/a/display.php?r=5344219"></script>
+                                <div data-clickadilla-banner="28215"></div>
                             </div>
                             <div className="col-12 col-lg-11 px-0 mx-auto">
                                 <DetailCopy abstractDetail={abstractState.abstractDetail} />
